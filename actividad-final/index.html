@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Alinnovatri | Responsive Design</title>
+    <!-- ETIQUETAS META -->
+    <!-- Search Engine -->
+    <meta name="description" content="Página web desarrollada para el curso de diseño web desde cero. En esta página encontran los conceptos básico en el mundo del front-end.">
+    <meta name="image" content="....">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Template | Alinnovatri">
+    <meta itemprop="description" content="Página web desarrollada para el curso de diseño web desde cero. En esta página encontran los conceptos básico en el mundo del front-end.">
+    <meta itemprop="image" content="....">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Template | Alinnovatri">
+    <meta name="twitter:description" content="Página web desarrollada para el curso de diseño web desde cero. En esta página encontran los conceptos básico en el mundo del front-end.">
+    <meta name="twitter:site" content="@Gibranm07">
+    <meta name="twitter:creator" content="@Gibranm07">
+    <meta name="twitter:image:src" content="....">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Template | Alinnovatri">
+    <meta name="og:description" content="Página web desarrollada para el curso de diseño web desde cero. En esta página encontran los conceptos básico en el mundo del front-end.">
+    <meta name="og:image" content="...">
+    <meta name="og:url" content="http://alinnovatri.com/">
+    <meta name="og:site_name" content="Template  | Alinnovatri">
+    <meta name="og:locale" content="en_MX">
+    <meta name="fb:admins" content="100000320101906">
+    <meta name="fb:app_id" content="249546522648911">
+    <meta name="og:type" content="website">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.min.css">
+
+</head>
+
+<body>
+    <!-- Encabezado de la página web -->
+    <header>
+        <div class="slider fullscreen">
+            <ul class="slides">
+                <li>
+                    <img src="images/slider/card-image.jpg" alt="Imagen principal del banner material design"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>MATERIAL DESIGN: <br>¿POR QUÉ TODOS HABLAN DE ESO?</h3>
+                        <h5 class="light grey-text text-lighten-3">Material Design se integró en la versión 5.0 (Android Lollipop)</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/slider/card-image-2.jpg" alt="Imagen principal del banner material design"> <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>MATERIAL DESIGN:</h3>
+                        <h5 class="light grey-text text-lighten-3">Material Design se integró en la versión 5.0 (Android Lollipop) </h5>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+    <!-- Barra de navegación -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-4">
+                <a href="#!" class="brand-logo">
+                    <img src="images/logo-materialize-blanco.png" alt="Logo Alinnovatri" class="responsive-img logo-materialize">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="servicios/" data-target="services-menu">Servicios<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--Estructura de la barra de navegación en móvil -->
+    <ul id="mobile-demo" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/fondo-user.png">
+                </div>
+                <a href="http://alinnovatri.com/"><img class="circle" src="images/logo-materialize-blanco.png"></a>
+                <a href="http://alinnovatri.com/"><span class="white-text name">Gibrán Martínez</span></a>
+                <a href="malito:gibran.martinez@teinux.com"><span class="white-text email">gibran.martinez@teinux.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">language</i>Ver sitio Web</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Menu de Navegación</a></li>
+        <li><a class="waves-effect" href="index.html">Inicio</a></li>
+        <li><a class="waves-effect" href="nosotros.html">Nosotros</a></li>
+        <li class="padding-menu">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Servicios<i class="material-icons right">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="servicios/desarrollo-web.html">Diseño Web</a></li>
+
+                            <li><a href="servicios/desarrollo-web.html">UI&UX Design</a></li>
+                            <li><a href="servicios/desarrollo-web.html">Business Apps</a></li>
+                            <li><a href="servicios/desarrollo-web.html">Auditiría SEO</a></li>
+                            <li class="divider"></li>
+                            <li><a href="servicios/desarrollo-web.html">Marketing Digital </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+
+        <li><a class="waves-effect" href="contacto.html">Contacto</a></li>
+    </ul>
+    <!-- Contenido de la página web -->
+    <main id="content-container">
+        <!-- Sección de nostros -->
+        <section class="section scrollspy" id="about">
+            <div class="container">
+                <div class="row ">
+                    <div class="col s12 m6">
+                        <h2><strong>Material</strong> | Design </h2>
+                        <h4>¿Qué es lo nuevo  ?</h4>
+                        <p>Material design es una normativa de diseño enfocado en la visualización del sistema operativo Android, además en la web y en cualquier plataforma. Fue desarrollado por Google y anunciado en la conferencia Google I/O celebrada el 25 de junio de 2014 </p>
+                        <br>
+                        <ul class="collapsible popout">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">flight_land</i>Misión</div>
+                                <div class="collapsible-body"><span>Utilizar la ciencia y la tecnología espacial para atender las necesidades de la población mexicana y generar empleos de alto valor agregado, impulsando la innovación y el desarrollo del sector espacial; contribuyendo a la competitividad y al posicionamiento de México en la comunidad internacional, en el uso pacífico, eficaz y responsable del espacio.</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">flight</i>Visión</div>
+                                <div class="collapsible-body"><span>Contar con una infraestructura espacial soberana y sustentable de observación de la tierra, navegación y comunicaciones satelitales de banda ancha, que contribuya a mejorar la calidad de vida de la población y al crecimiento económico de México                                    .</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">flight_takeoff</i>Objetivos</div>
+                                <div class="collapsible-body"><span>
+                                    <ol>
+                                        <li>Formación de Capital Humano en el Campo Espacial</li>
+                                        <li>Investigación Científica y Desarrollo Tecnológico Espacial</li>
+                                        <li>Desarrollo Industrial, Comercial y Competitividad en el Sector Espacial</li>
+                                        <li>Asuntos Internacionales, Normatividad y Seguridad en la Materia </li>
+                                    </ol>
+                                </span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6 center-align image-column">
+                        <img src="images/nosotros/nosotros.gif" alt="Imagen de la sección de nosotros" class="responsive-img about-image hide-on-small-only" />
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container">
+                <div class="parallax"><img src="images/parallax-op-2.jpg"></div>
+            </div>
+
+
+        </section>
+        <!-- Sección de servicios -->
+        <section class="scrollspy section" id="services">
+            <div class="container" >
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="card z-depth-4">
+                            <div class="card-image">
+                                <img src="images/servicios/estrella-fugaz.jpg" alt="Estrella Fugaz" />
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content">
+                                <h5>Material es la metáfora </h5>
+                                <p>Es la teoría que unifica un espacio racionalizado y un sistema de movimiento. El material está basado en la realidad táctil.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="servicios/" class="teal-text">Solicitar servicio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card z-depth-4">
+                            <div class="card-image">
+                                <img src="images/servicios/noche-material-design.jpg" alt="Noche Material Design" />
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content">
+                                <h5>Elementos gráficos de material </h5>
+                                <p>Es la teoría que unifica un espacio racionalizado y un sistema de movimiento. El material está basado en la realidad táctil.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="servicios/" class="teal-text">Solicitar servicio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card z-depth-4">
+                            <div class="card-image">
+                                <img src="images/servicios/lluvia-material.jpg" alt="Lluvia material design" />
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content">
+                                <h5>El movimiento para enfocar</h5>
+                                <p>Es la teoría que unifica un espacio racionalizado y un sistema de movimiento. El material está basado en la realidad táctil.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="servicios/" class="teal-text">Solicitar servicio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section scrollspy grey lighten-5" id="caracteristics">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="s12">
+                        <h3>Principales Carácteristicas</h3>
+                    </div>
+                    <br>
+                    <div class="col s12 m4">
+                        <div class="service">
+                            <div class="service-icon ">
+                                <!-- <i class="material-icons">add</i> -->
+                                <i class="material-icons teal-text">android</i>
+                            </div>
+                            <div class="service-info">
+                                <h5>Minimalismo y colores planos </h5>
+                                <p>Material design se caracteriza por seguir un estilo visual que simula un espacio real, para que el usuario se sienta cómodo .</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="service">
+                            <div class="service-icon ">
+                                <!-- <i class="material-icons">add</i> -->
+                                <i class="material-icons teal-text">apps</i>
+                            </div>
+                            <div class="service-info">
+                                <h5>Sombreado simulando niveles</h5>
+                                <p>Material design se caracteriza por seguir un estilo visual que simula un espacio real, para que el usuario se sienta cómodo .</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="service">
+                            <div class="service-icon ">
+                                <!-- <i class="material-icons">add</i> -->
+                                <i class="material-icons teal-text">chat</i>
+                            </div>
+                            <div class="service-info">
+                                <h5>Homogeneidad en plataformas</h5>
+                                <p>Material design se caracteriza por seguir un estilo visual que simula un espacio real, para que el usuario se sienta cómodo .</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="service">
+                            <div class="service-icon ">
+                                <!-- <i class="material-icons">add</i> -->
+                                <i class="material-icons teal-text">adb</i>
+                            </div>
+                            <div class="service-info">
+                                <h5>Animación de elementos</h5>
+                                <p>Material design se caracteriza por seguir un estilo visual que simula un espacio real, para que el usuario se sienta cómodo .</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="service">
+                            <div class="service-icon ">
+                                <!-- <i class="material-icons">add</i> -->
+                                <i class="material-icons teal-text">compare</i>
+                            </div>
+                            <div class="service-info">
+                                <h5>Concepto espacial 3D</h5>
+                                <p>Material design se caracteriza por seguir un estilo visual que simula un espacio real, para que el usuario se sienta cómodo .</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="service">
+                            <div class="service-icon ">
+                                <!-- <i class="material-icons">add</i> -->
+                                <i class="material-icons teal-text">location_on</i>
+                            </div>
+                            <div class="service-info">
+                                <h5>Iconos vectoriales</h5>
+                                <p>Material design se caracteriza por seguir un estilo visual que simula un espacio real, para que el usuario se sienta cómodo .</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Sección de portafolio -->
+        <section class="section scrollspy" id="portfolio">
+            <div class="container">
+                <h3>#proyectos<strong>MaterialDesign</strong></h3>
+                <br>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <img src="images/portafolio/portfolio-1.jpg" data-caption="Una imagen de un camino con un grupo de árboles en un parque"
+                            alt="Portafolio de los servicios" class="responsive-img card materialboxed">
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <img src="images/portafolio/portfolio-2.jpg" data-caption="Una imagen de un camino con un grupo de árboles en un parque"
+                            alt="Portafolio de los servicios" class="responsive-img card materialboxed">
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <img src="images/portafolio/portfolio-3.jpg" data-caption="Una imagen de un camino con un grupo de árboles en un parque"
+                            alt="Portafolio de los servicios" class="responsive-img card materialboxed">
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <img src="images/portafolio/portfolio-4.jpg" data-caption="Una imagen de un camino con un grupo de árboles en un parque"
+                            alt="Portafolio de los servicios" class="responsive-img card materialboxed">
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <img src="images/portafolio/portfolio-5.jpg" data-caption="Una imagen de un camino con un grupo de árboles en un parque"
+                            alt="Portafolio de los servicios" class="responsive-img card materialboxed">
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <img src="images/portafolio/portfolio-6.jpg" data-caption="Una imagen de un camino con un grupo de árboles en un parque"
+                            alt="Portafolio de los servicios" class="responsive-img card materialboxed">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de contacto -->
+        <section class="section scrollspy blue-grey darken-1 white-text" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2">
+                        <h3>Formulario de contacto</h3>
+                        <form action="php/mail.php" method="post" id="form-contact">
+                            <div class="input-field col s12 l6">
+                                <input type="text" id="usr-name" class="validate" name="usr-name" required>
+                                <label for="usr-name">Nombre</label>
+                                <span class="helper-text" data-error="Llenar campo" data-success="Correcto"></span>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input type="text" id="usr-phone" class="validate" name="usr-phone" pattern="[0-9]{10}"
+                                    maxlength="10" required>
+                                <label for="usr-phone">Teléfono</label>
+                                <span class="helper-text" data-error="Teléfono incorrecto" data-success="Correcto"></span>
+
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="email" id="usr-email" class="validate" required>
+                                <label for="usr-email" data-error="wrong" data-success="right" name="usr-email">Email</label>
+                                <span class="helper-text" data-error="Correo incorrecto" data-success="Correcto"></span>
+                            </div>
+                            <div class="input-field col s12">
+                                <textarea id="usr-msj" class="materialize-textarea" name="usr-msj" required></textarea>
+                                <label for="usr-msj">Mensaje</label>
+                                <span class="helper-text" data-error="Llenar campo" data-success="Correcto"></span>
+                            </div>
+                            <div class="input-field col s12">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer blue-grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    <img src="images/logo-materialize.png" alt="Logo de la empresa" class="responsive-img" />
+                    <h5 class="white-text">Material | Design</h5>
+                    <p class="grey-text text-lighten-4">Somos una Empresa Mexicana donde asesoramos y generamos soluciones que satisfacen las necesidades reales de nuestros clientes. </p>
+                </div>
+                <div class="col s12 m4 l4">
+                    <h5 class="white-text">Servicios Destacados</h5>
+                    <ul class="section table-of-contents">
+                        <li><a href="servicios/">Desarrollo Web</a></li>
+                        <li><a href="servicios/">Marketing Digital</a></li>
+                        <li><a href="servicios/">Google Adwords</a></li>
+                        <li><a href="servicios/">UX&UI Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <h5 class="white-text">Nuetras redes sociales</h5>
+                    <p class="grey-text text-lighten-4">Fomentamos, motivamos e inspiramos con el conocimiento y experiencia marcamos la diferencia.</p>
+                    <ul class="social-media">
+                        <li>
+                            <a href="https://www.facebook.com/teinux" class="facebook">
+                                <img src="images/redes/facebook.png" alt="Facebook" class="icon-redes">
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/teinux" class="twitter">
+                                <img src="images/redes/gorjeo.png" alt="twitter" class="icon-redes">
+                                Twitter
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/teinux" class="instagram">
+                                <img src="images/redes/instagram.png" alt="Instagram" class="icon-redes">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright © 2019 Todos los derechos reservados. <a href="http://alinnovatri.com/" class="teal-text">Gibran Martínez</a>
+                <a class="grey-text text-lighten-4 right" href="#!">  Aviso de privacidad </a>
+                <a class="grey-text text-lighten-4 right" href="sitemap.html"> Sitemap | </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Extras -->
+    <!-- Submenus -->
+    <ul id="services-menu" class="dropdown-content">
+        <li><a href="servicios/desarrollo-web.html">Desarrollo Web</a></li>
+        <li><a href="servicios/desarrollo-web.html">Aplicaciones Móviles</a></li>
+        <li class="divider"></li>
+        <li><a href="servicios/desarrollo-web.html">Marketing Digital</a></li>
+        <li><a href="servicios/desarrollo-web.html">Google Adwords</a></li>
+        <li><a href="servicios/desarrollo-web.html">Photoshop</a></li>
+        <li><a href="servicios/desarrollo-web.html">Chatbot</a></li>
+    </ul>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
