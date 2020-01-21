@@ -1,0 +1,7 @@
+.idea/
+node_modules/
+vendor/
+
+.DS_Store
+prepros.config
+prepros-6.config
