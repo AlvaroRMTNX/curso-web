@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.encabezado {
+  background-color: tomato;
+  height: 100px;
+}
+.contenido{
+  background-color: steelblue;
+  height: 200px;
+}
+.pie{
+  background-color: lightgreen;
+  height: 50px;
+  margin-top: auto;
+}
