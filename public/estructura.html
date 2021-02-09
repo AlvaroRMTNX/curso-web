@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura de HTML</title>
+	<link rel="stylesheet" href="./recursos/css/prism.css">
+	<link rel="stylesheet" href="./recursos/css/estructura.css">
+</head>
+<body>
+	<div class="contenedor">
+		<h1>ESTRUCUTRA DE UN DOCUMENTO HTML</h1>
+		<p>Todo docuemento HTML debe iniciar por el DOCTYPE y se escribe:</p>
+		<pre class="language-markup line-numbers" data-language="HTML5"><code>
+&lt;!DOCTYPE html&gt;</code></pre>
+		<p>*Nota.- El <code class="solito">&lt;!DOCTYPE html&gt;</code> le indica al navegador con que tipo de lenguaje va a interpretar que en este caso es HTML.</p>
+		<br>
+		<p>Después de indicarle el tipo de lenguaje que va a reconocer el navegador tenemos que dar inicio a nuestro HTML y eso lo hacemos con la etiqueta de <code class="solito">&lt;html&gt;</code> y cabe mecionar que esta es una etiqueta de apertura y cierre por lo tanto hay que colocarla asi:</p>
+		<pre class="language-markup line-numbers" data-language="HTML5"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;/html&gt;</code></pre>
+		<p>*Nota.- La etiqueta <code class="solito">&lt;html&gt; &lt;/html&gt;</code> representa la raiz de un documento HTML</p>
+		<br>
+		<p>Dentro de la etiqueta <code class="solito">&lt;html&gt; &lt;/html&gt;</code> tenemos que colocar 2 etiquetas importantes que son el <code class="solito">&lt;head&gt; &lt;/head&gt;</code> y el <code class="solito">&lt;body&gt; &lt;/body&gt;</code> que tambien son etiquetas de apertura y cierre.<br>
+		La etiqueta <code class="solito">&lt;head&gt; &lt;/head&gt;</code> representa una coleccion de metadatos para el documento. Dicho esto de otra manera es la parte del codigo que le indica información al navegador y motores de busqueda sobre nuestra página o sitio web.<br>
+		La etiqueta <code class="solito">&lt;body&gt; &lt;/body&gt;</code> representa el contenido del documento. Dicho de otra manera es la parte del codigo que contendrá todo el contenido de nuestra página o sitio web.<br>
+		Ambos se escriben de la siguente manera en nuestro documento:</p>
+		<pre class="language-markup line-numbers" data-language="HTML5"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+
+	&lt;/head&gt;
+	&lt;body&gt;
+	
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+		<p>Dentro de la etiqueta head se pueden colocar metadatos como el tipo de codificación que usaras en el contenido.<br>
+		Una etiqueta importante dentro de <code class="solito">&lt;head&gt;</code> es <code class="solito">&lt;title&gt;</code><br>
+		Esta etiqueta representa el titulo o nombre del documento. Los autores deberian usar titulos que identifiquen sus documentos incluso cuando ellos sean usados fuera de contexto, por ejemplo dentro de una histria del autor o marcadores, o dentro de resultados de busqueda. El titulo del documento es a menudo diferente de su primer encabezado, ya que el primer encabezado no esta solo cuando esta fuera de contexto. Y se coloca de la siguente manera:</p>
+		<pre class="language-markup line-numbers" data-language="HTML5"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Mi primera página web&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+	</div>
+	<script src="./recursos/js/prism.js"></script>
+</body>
+</html>

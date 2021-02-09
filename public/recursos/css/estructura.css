@@ -1,0 +1,33 @@
+body{
+	font-family: sans-serif;
+	background: steelblue;
+	padding-bottom: 25em;
+}
+.contenedor{
+	width: 90%;
+	margin: auto;
+}
+
+.contenedor h1{
+	text-align: center;
+	color: #fff;
+}
+
+.contenedor p{
+	text-align: justify;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: normal;
+}
+
+pre{
+	width: 500px;
+}
+
+.solito{
+	background: #fff;
+	color: #000;
+	border-radius: 5px;
+	padding: .2em .5em;
+	margin: .1em;
+}

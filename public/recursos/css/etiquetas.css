@@ -1,0 +1,122 @@
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	background: steelblue;
+	padding-bottom: 25em;
+}
+
+.contenedor{
+	width: 90%;
+	margin: auto;
+}
+
+.contenedor h1{
+	text-align: center;
+	color: #fff;
+}
+
+.contenedor h2{
+	color: #fff;
+}
+
+.contenedor p{
+	text-align: justify;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: normal;
+	line-height: 1.5em;
+}
+
+.contenedor li{
+	color:#fff;
+	padding-bottom: .5em;
+	font-size: 1.1em;
+}
+
+.codigo{
+	font-size: 16px;
+	min-width: 500px;
+}
+
+.solito{
+	background: #fff;
+	color: #000;
+	border-radius: 5px;
+	padding: .2em .5em;
+	margin: .1em;
+}
+
+.navegador{
+	width: 90%;
+	max-height: 500px;
+	min-width: 300px;
+	min-height: 250px;
+	background: #eee;
+	margin: 20px auto;
+	border-radius: 7px;
+	position: relative;
+	box-shadow: 0px 0px 10px #000;
+}
+
+.barra{
+	width: 100%;
+	height: 25px;
+	background: #555;
+	position: absolute;
+	border-radius: 5px 5px 0px 0px;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+}
+
+.barra:before{
+	content: "";
+	flex: 0 0 auto;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: hsl(5, 100%, 66%);
+	margin: 0px 10px;
+	box-shadow: 20px 0px 0px hsl(44, 100%, 51%),
+				40px 0px 0px hsl(132, 81%, 44%);
+	position: relative;
+	z-index: 100;
+}
+
+.barra:after{
+	content: "palestra.io";
+	flex: 0 1 auto;
+	display: inline-block;
+	width: 55%;
+	height: 15px;
+	background: #f7f7f7;
+	color: #000;
+	margin: 0px auto;
+	text-align: center;
+	line-height: 15px;
+	font-size: 11px;
+	border-radius: 5px;
+}
+
+.layaout{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 15px;
+}
+
+.layaout .texto{
+	color: #000;
+	text-align: justify;
+}
+
+.layaout .normal{
+	font-size: 16px;
+}

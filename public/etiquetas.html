@@ -1,0 +1,1624 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Etiquetas</title>
+    <link rel="stylesheet" href="./recursos/css/prism.css">
+    <link rel="stylesheet" href="./recursos/css/etiquetas.css">
+</head>
+<body>
+    <header class="contenedor">
+        <h1>Etiquetas en HTML</h1>
+    </header>
+
+    <main class="contenedor">
+        <p>Dentro de HTML encontramos un monton de eqtiquetas, trataré de resumir las que más se suelen ocupar con el día a día explicando en breve su uso y como se declaran en el HTML.</p>
+        <p>Las etiquetas las podemos dividir en diversos grupos entre los que podemos encontrar los siguentes:</p>
+        <ol>
+            <li>Etiquetas de Meta Datos</li>
+            <li>Etiquetas de Sección</li>
+            <li>Etiquetas de Contenido</li>
+            <li>Etiquetas de Texto en Linea</li>
+            <li>Contenido Embebido</li>
+            <li>Tablas</li>
+            <li>Formularios</li>
+        </ol>
+    </main>
+
+    <article class="etiquetas-meta contenedor">
+        <h2>Etiquetas de Meta Datos:</h2>
+        <ol>
+            <li>
+                <code class="solito">&lt;head&gt; &lt;/head&gt;</code>
+                <p>Es la etiqueta que nos permite colocar dentro toda la colección de meta datos.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;head&gt;
+
+&lt;/head&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;link&gt;</code>
+                <p>Especifica la relación entre el documento actual y un recurso externo.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;link rel="stylesheet" href="css/style.css"&gt;
+</code></pre>
+                <p>Esta etiqueta es de solo apertura por lo tanto no hay que indicar el cierre y hace uso de dos atributos el primero es <code class="solito">rel=""</code> al que se le coloca un valor que indica la relación que va a tener el archivo externo con el documento HTML y el segundo <code class="solito">href=""</code> a este se le coloca la ruta de donde va a extraer este archivo.<br>
+                En este caso la relación que tiene es una hoja de estilos (stylesheet).</p>
+            </li>
+            <li>
+                <code class="solito">&lt;meta&gt;</code>
+                <p>Sirve para aportar información sobre el documento.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;meta charset="UTF-8"&gt;
+</code></pre>
+                <p>Esta etiqueta también es de solo apertura y generalmente tiene dos atributos <code class="solito">name=""</code> y <code class="solito">content=""</code> pero existen excepciónes como la que muestra el ejemplo que lo que indicamos con ese meta es el tipo de formato de codificación de caracteres tiene nuestro sitio web que en este caso es UTF-8 que nos permite que lea los caracteres especiales del lenguaje español como con las letras con tildes.<br>
+                Pero con esta etiqueta también se le puede colocar el autor de la página, la descripción de la página, entre otras.</p>
+            </li>
+            <li>
+                <code class="solito">&lt;title&gt; &lt;/title&gt;</code>
+                <p>Indica el título del documento.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;title&gt;Mi primera página web&lt;/title&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;style&gt; &lt;/style&gt;</code>
+                <p>Es el elemento encargado de indicar la información de estilo.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;style&gt;
+    .content{
+        width: 90%;
+        margin: auto;
+    }
+&lt;/style&gt;
+</code></pre>
+                <p>Dentro de esta etiqueta se coloca codigo CSS para darle estilos a nuestro sitio web, durante mucho tiempo se consideraba una mala practica colocar esto dentro del mismo HTML ya que se llenaba de 2 lenguejes diferentes el HTML. Pero ahorita en la actualidad se sule poner en el mismo HTML cuando hablamos de WEB COMPONENTS que es una forma de crear y alamacenar pequeños elementos del sitio web para despues poderlos reutilizar de manera mas sencilla.<br> 
+                Nota.- (Pero si no vas a crear ningun WEB COMPONENT no te recomiendo que lo coloques dentro del HTML).</p>
+            </li>
+        </ol>
+    </article>
+
+    <article class="etiquetas-meta contenedor">
+        <h2>Etiquetas de Sección</h2>
+        <ol>
+            <li>
+                <code class="solito">&lt;body&gt;&lt;/body&gt;</code>
+                <p>Representa todo el contenido de nuestro documento.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;body&gt;
+    
+&lt;/body&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;header&gt;&lt;/header&gt;</code>
+                <p>Se utiliza para representar la cabecera del sitio web.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;header&gt;
+    
+&lt;/header&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;article&gt;&lt;/article&gt;</code>
+                <p>Representa un contenido completo en si mismo. Los articles deben tener un encabezado dentro.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;article&gt;
+    
+&lt;/article&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;section&gt;&lt;/section&gt;</code>
+                <p>Son las secciones internas de un articulo.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;section&gt;
+    
+&lt;/section&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;nav&gt;&lt;/nav&gt;</code>
+                <p>Se usa para indicar los menus de navegación de las páginas web.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;nav&gt;
+    
+&lt;/nav&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;aside&gt;&lt;/aside&gt;</code>
+                <p>Se usa para indicar los elementos que no estan directamente relacionados con el contenido de todo el sitio web, por ejemplo los anuncios publicitarios.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;aside&gt;
+    
+&lt;/aside&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;footer&gt;&lt;/footer&gt;</code>
+                <p>Se utiliza para indicar la parte final del documento como por ejemplo el copyright de la página.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;footer&gt;
+    
+&lt;/footer&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;address&gt;&lt;/address&gt;</code>
+                <p>Se utiliza para indicar las sección de contacto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;address&gt;
+    
+&lt;/address&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;h1&gt;&lt;/h1&gt; | &lt;h2&gt;&lt;/h2&gt; | &lt;h3&gt;&lt;/h3&gt; | &lt;h4&gt;&lt;/h4&gt; | &lt;h5&gt;&lt;/h5&gt; | &lt;h6&gt;&lt;/h6&gt;</code>
+                <p>ENCABEZADOS<br>  
+                Son los titulos de las secciones.<br>
+                Tenemos 6 etiquetas H que van del h1 al h6 y cada uno representa el titulo, estos tienen un jerarquia para ser usados el h1 representa el titulo general de toda la web miestras que los demas son subtitulos.<br>
+                Para que pueda existir un susesor de los hs debe de existir previamente el h antesesor, por ejemplo para que exita un h3 dentro del sitio web debe de existir previo un h2, esto es más con la finalidad de darle un estilo semantico al html y a la hora de darle estilos con CSS o querrer acceder desde javascript a los elemtos sea más fácil hacerlo.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;h1&gt;Soy un h1&lt;/h1&gt;
+&lt;h2&gt;Soy un h2&lt;/h2&gt;
+&lt;h3&gt;Soy un h3&lt;/h3&gt;
+&lt;h4&gt;Soy un h4&lt;/h4&gt;
+&lt;h5&gt;Soy un h5&lt;/h5&gt;
+&lt;h6&gt;Soy un h6&lt;/h6&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <h1 class="texto">Soy un h1</h1>
+                        <h2 class="texto">Soy un h2</h2>
+                        <h3 class="texto">Soy un h3</h3>
+                        <h4 class="texto">Soy un h4</h4>
+                        <h5 class="texto">Soy un h5</h5>
+                        <h6 class="texto">Soy un h6</h6>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </article>
+
+    <article class="etiquetas-contenido contenedor">
+        <h2>Etiquetas de Contenido</h2>
+        <ol>
+            <li>
+                <code class="solito">&lt;p&gt;&lt;/p&gt;</code>
+                <p>Representa un parrafo (es un bloque de texto).</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur totam eveniet, facilis, natus impedit maiores aut nemo perspiciatis error quis quisquam autem sed rem quidem ullam consequuntur quam velit tempora.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur totam eveniet, facilis, natus impedit maiores aut nemo perspiciatis error quis quisquam autem sed rem quidem ullam consequuntur quam velit tempora.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;hr&gt;</code>
+                <p>Es un separador (dibuja una linea).</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;hr&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <hr>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;pre&gt;&lt;/pre&gt;</code>
+                <p>Representa un bloque de texto preformatiado. Lo que hace es respetar tal cual nosotros coloquemos el texto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;pre&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Officia nesciunt maiores voluptates! Molestias accusamus 
+cupiditate qui debitis culpa doloribus non alias cumque 
+reprehenderit, sint! Nobis beatae, molestias magni porro et.
+&lt;/pre&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <pre class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Officia nesciunt maiores voluptates! Molestias accusamus 
+cupiditate qui debitis culpa doloribus non alias cumque 
+reprehenderit, sint! Nobis beatae, molestias magni porro et.
+                        </pre>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;blockquote&gt;&lt;/blockquote&gt;</code>
+                <p>Se utiliza para citar contenido a nivel de bloque. Esta etiqueta tiene una atributo llamado <code class="solito">cite=""</code> donde se coloca el enlace a la fuente original de la cita que por defecto del navegador es una URI.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;blockquote cite="http://www.worldwildlife.org/about"&gt;&lt;
+For 50 years, WWF has been protecting the future of nature.
+The world’s leading conservation organization, WWF works in 100 countries and is supported by more than one million members in the United States and close to five million globally. WWF's unique way of working combines global reach with a foundation in science, involves action at every level from local to global, and ensures the delivery of innovative solutions that meet the needs of both people and nature.
+&lt;/blockquote&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <blockquote cite="http://www.worldwildlife.org/about" class="texto normal">
+                            For 50 years, WWF has been protecting the future of nature.
+                            The world’s leading conservation organization, WWF works in 100 countries and is supported by more than one million members in the United States and close to five million globally. WWF's unique way of working combines global reach with a foundation in science, involves action at every level from local to global, and ensures the delivery of innovative solutions that meet the needs of both people and nature.
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;main&gt;&lt;/main&gt;</code>
+                <p>Representa el contenido principal del sitio web. En el se coloca la información más importante del sitio.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;main&gt;
+
+&lt;/main&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;ol&gt;&lt;/ol&gt;</code>
+                <p>Se utiliza para indicar listas ordenadas, esto lo que general es el contenedor de la lista para indicar cada item de la lista es necesario colocar una etiqueta li cada vez que se quiera crear un nuevo contenido de la lista.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;ol&gt;
+
+&lt;/ol&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;ul&gt;&lt;/ul&gt;</code>
+                <p>Se utiliza de igual manera que el ol para indicar una lista, la unica diferencia es que el ul representa listas no ordenadas y de igual modo para indicar cada item de la lista se utiliza li.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;ul&gt;
+
+&lt;/ul&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;li&gt;&lt;/li&gt;</code>
+                <p>Se utilizan para crear items dentros de las listas sin importar si son listas ordenadas o desordenadas se utiliza esta estiqueta.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;!--LISTA ORDENADA--&gt;
+&lt;ol&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;li&gt;Item 5&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--LISTA DESORDENADA--&gt;
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;li&gt;Item 5&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <ol style="margin-bottom: 10px;">
+                            <li class="texto normal">Item 1</li>
+                            <li class="texto normal">Item 2</li>
+                            <li class="texto normal">Item 3</li>
+                            <li class="texto normal">Item 4</li>
+                            <li class="texto normal">Item 5</li>
+                        </ol>
+                        <ul style="list-style: disc;">
+                            <li class="texto normal">Item 1</li>
+                            <li class="texto normal">Item 2</li>
+                            <li class="texto normal">Item 3</li>
+                            <li class="texto normal">Item 4</li>
+                            <li class="texto normal">Item 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;dl&gt;&lt;/dl&gt;</code>
+                <p>Son listas de definición que pueden servir para hacer glosarios.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;!--LISTA DE DEFINICIÓN--&gt;
+&lt;dl&gt;
+
+&lt;/dl&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;dt&gt;&lt;/dt&gt;</code>
+                <p>Se utiliza para colocar el termino que se va a definir</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;!--LISTA DE DEFINICIÓN--&gt;
+&lt;dl&gt;
+    &lt;dt&gt;Lorem&lt;/dt&gt;
+&lt;/dl&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <dl style="margin-bottom: 10px;">
+                            <dt class="texto normal">Lorem</dt>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;dd&gt;&lt;/dd&gt;</code>
+                <p>Se utiliza para colocar la definicón de del dt.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;!--LISTA DE DEFINICIÓN--&gt;
+&lt;dl&gt;
+    &lt;dt&gt;Ciencia&lt;/dt&gt;
+    &lt;dd&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quis, recusandae. Adipisci eveniet quibusdam alias, consequuntur quisquam, ratione magni placeat fugit laudantium maiores cupiditate, magnam quasi vel quo aspernatur? Hic.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <dl style="margin-bottom: 10px;">
+                            <dt class="texto normal">Lorem</dt>
+                            <dd class="texto normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quis, recusandae. Adipisci eveniet quibusdam alias, consequuntur quisquam, ratione magni placeat fugit laudantium maiores cupiditate, magnam quasi vel quo aspernatur? Hic.</dd>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;figure&gt;&lt;/figure&gt;</code>
+                <p>Representa contenido de flujo y opcionalmente puede tener una descrición. Generamente es para destacar contenido ya sean imagenes o texto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;figure&gt;
+    &lt;img src="http://lorempixel.com/300/200"&gt;
+&lt;/figure&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <figure>
+                            <img src="http://lorempixel.com/300/200" alt="Lorempixel">
+                        </figure>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;figcaption&gt;&lt;/figcaption&gt;</code>
+                <p>Se utiliza para escribir la descripción del figure.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;figure&gt;
+    &lt;img src="http://lorempixel.com/300/200"&gt;
+    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <figure>
+                            <img src="http://lorempixel.com/300/200" alt="Lorempixel">
+                            <figcaption class="texto normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;div&gt;&lt;/div&gt;</code>
+                <p>El div no significa nada. Se suele utiliar para agrupar elementos y de ese modo modificarlos con CSS o JAVASCRIPT.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;div&gt;
+    &lt;!-- 
+    Aqui dentro se colocan el resto de elementos que estaran contenidos por el DIV, 
+    pueden ser un numero infinito de elementos de cualquier tipo. 
+    --&gt;
+&lt;/div&gt;
+</code></pre>
+            </li>
+        </ol>
+    </article>
+
+    <article class="etiquetas-linea contenedor">
+        <h2>Etiquetas de Texto en Linea</h2>
+        <ol>
+            <li>
+                <code class="solito">&lt;a&gt;&lt;/a&gt;</code>
+                <p>Se utilizan para indicar enlaces.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;a href="URL"&gt;Soy un enlace&lt;/a&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <a href="#">Soy un enlace</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;em&gt;&lt;/em&gt;</code>
+                <p>Se le da una enfacis a algun texto. Dicho de otro modo resalta una parte de texto sobro las demás.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;&lt;em&gt;Lorem ipsum dolor sit amet&lt;/em&gt;, consectetur adipisicing elit. Ut odit dolor asperiores debitis velit, eos quas. Ullam hic, beatae, animi sapiente distinctio, totam cumque voluptatum, rem perferendis quaerat tempore nemo.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal"><em>Lorem ipsum dolor sit amet</em>, consectetur adipisicing elit. Ut odit dolor asperiores debitis velit, eos quas. Ullam hic, beatae, animi sapiente distinctio, totam cumque voluptatum, rem perferendis quaerat tempore nemo.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;strong&gt;&lt;/strong&gt;</code>
+                <p>Representa un elemento que tiene mucha mas importancia que los elmenetos entre em.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;&lt;strong&gt;Lorem ipsum dolor sit amet&lt;/strong&gt;, consectetur adipisicing elit. Ut odit dolor asperiores debitis velit, eos quas. Ullam hic, beatae, animi sapiente distinctio, totam cumque voluptatum, rem perferendis quaerat tempore nemo.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal"><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Ut odit dolor asperiores debitis velit, eos quas. Ullam hic, beatae, animi sapiente distinctio, totam cumque voluptatum, rem perferendis quaerat tempore nemo.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;small&gt;&lt;/small&gt;</code>
+                <p>Se utiliza para indicar que es un contenido de menor importancia.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet&lt;/small&gt;, consectetur adipisicing elit. Ut odit dolor asperiores debitis velit, eos quas. Ullam hic, beatae, animi sapiente distinctio, totam cumque voluptatum, rem perferendis quaerat tempore nemo.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal"><small>Lorem ipsum dolor sit amet</small>, consectetur adipisicing elit. Ut odit dolor asperiores debitis velit, eos quas. Ullam hic, beatae, animi sapiente distinctio, totam cumque voluptatum, rem perferendis quaerat tempore nemo.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;cite&gt;&lt;/cite&gt;</code>
+                <p>Se utiliza para citar a algun autor o contenido.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;&lt;cite&gt;Galileo&lt;/cite&gt; dijo: "... y sin embargo, se mueve."&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal"><cite>Galileo</cite> dijo: "... y sin embargo, se mueve."</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;q&gt;&lt;/q&gt;</code>
+                <p>Para realizar una cita a nivel de texto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;El estándar dice: &lt;q cite='http://html.conclase.net/w3c/html401-es/struct/text.html#h-9.2.2'&gt;... Q sirve para citas cortas (contenido en línea) que no necesitan cambios de párrafo.&lt;/q&gt;&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal">El estándar dice: <q cite='http://html.conclase.net/w3c/html401-es/struct/text.html#h-9.2.2'>... Q sirve para citas cortas (contenido en línea) que no necesitan cambios de párrafo.</q></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;dfn&gt;&lt;/dfn&gt;</code>
+                <p>Se utiliza para dar la definicion de un contenido.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; es un lenguaje de marcado.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal"><dfn>HTML</dfn> es un lenguaje de marcado.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;abbr&gt;&lt;/abbr&gt;</code>
+                <p>Se utiliza para realizar abrebiaturas. Y tiene una atributo llamato <code class="solito">title=""</code> en el cual se coloca la descripción completa de la abreviatura.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;&lt;abbr title="Hyper Text Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal"><abbr title="Hyper Text Markup Language">HTML</abbr></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;time&gt;&lt;/time&gt;</code>
+                <p>Se utiliza para indicar una fecha y hora. La podemos ocupar de varias maneras lo común es colocar la etiqueta y dentro la fecha y hora. Ejemplo: </p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;!-- Existen más formatos para colocar las fechas y horas puedes investigarlo si te interesa conocerlos todos. --&gt;
+&lt;time&gt;2017-01-01&lt;/time&gt;
+&lt;time&gt;14:54&lt;/time&gt;
+&lt;time&gt;2017-01-01 14:54&lt;/time&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <time class="texto normal">2017-01-01</time>
+                        <time class="texto normal">14:54</time>
+                        <time class="texto normal">2017-01-01 14:54</time>
+                    </div>
+                </div>
+                <p>La otra forma es colocarle un atributo <code class="solito">datetime=""</code> en el cual se coloca la fehca y dentro de las etiquetas una referencia del atributo, puede ser texto que identifique en especifico la fecha o un numero que identifique una fecha y hora especificos para el ususario. Ejemplo:</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;time datetime="2015-01-01"&gt;Hace dos años&lt;/time&gt;
+&lt;time datetime="2017-01-01"&gt;01&lt;/time&gt;
+&lt;time datetime="2017-01-01 14:54"&gt;Domingo 1ro de Enero a las 14:54&lt;/time&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <time datetime="2015-01-01" class="texto normal">Hace 2 años</time>
+                        <time datetime="2017-01-01" class="texto normal">01</time>
+                        <time datetime="2017-01-01 14:54" class="texto normal">Domingo 1ro de Enero a las 14:54</time>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;sup&gt;&lt;/sup&gt;</code>
+                <p>Es un subindice que aparece en la parte superior.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;Lorem ipsum dolor sit amet&lt;sup&gt;1&lt;/sup&gt;, consectetur adipisicing elit. Labore consequatur quia veritatis, magnam asperiores ad, deleniti assumenda mollitia facere sit quasi dolore cumque voluptatum unde doloremque aliquam itaque nam autem.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal">Lorem ipsum dolor sit amet<sup>1</sup>, consectetur adipisicing elit. Labore consequatur quia veritatis, magnam asperiores ad, deleniti assumenda mollitia facere sit quasi dolore cumque voluptatum unde doloremque aliquam itaque nam autem.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;sub&gt;&lt;/sub&gt;</code>
+                <p>Es un sub indice que aparece en la parte inferior.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;Lorem ipsum dolor sit amet&lt;sub&gt;1&lt;/sub&gt;, consectetur adipisicing elit. Labore consequatur quia veritatis, magnam asperiores ad, deleniti assumenda mollitia facere sit quasi dolore cumque voluptatum unde doloremque aliquam itaque nam autem.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal">Lorem ipsum dolor sit amet<sub>1</sub>, consectetur adipisicing elit. Labore consequatur quia veritatis, magnam asperiores ad, deleniti assumenda mollitia facere sit quasi dolore cumque voluptatum unde doloremque aliquam itaque nam autem.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;i&gt;&lt;/i&gt;</code>
+                <p>Es para la letra cursiva.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;i&gt;Soy cursiva&lt;/i&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <i class="texto normal">Soy cursiva</i>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;b&gt;&lt;/b&gt;</code>
+                <p>Es para utilizar negritas.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;b&gt;Soy un texto en negritas&lt;/b&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <b class="texto normal">Soy un texto en negritas</b>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;u&gt;&lt;/u&gt;</code>
+                <p>Se utiliza para dar un subrayado al texto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;u&gt;Soy un texto en subrayado&lt;/u&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <u class="texto normal">Soy un texto en subrayado</u>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;mark&gt;&lt;/mark&gt;</code>
+                <p>Se utilizan para remarcar una parte del texto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;mark&gt;Soy un texto remarcado&lt;/mark&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <mark class="texto normal">Soy un texto remarcado</mark>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;span&gt;&lt;/span&gt;</code>
+                <p>No signifaca nada al igual que los div son contenedores, la diferencia es que el span es a nivel de linea.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;span&gt;Soy un texto span&lt;/span&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;br&gt;</code>
+                <p>Es para forsar un salto de linea.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;br&gt; 
+Tempore soluta architecto perspiciatis illum aliquam deleniti, temporibus magnam, quasi.&lt;br&gt;
+Illum eos ipsum aliquam possimus, accusantium autem aliquid excepturi nihil suscipit ipsa.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                        Tempore soluta architecto perspiciatis illum aliquam deleniti, temporibus magnam, quasi.<br>
+                        Illum eos ipsum aliquam possimus, accusantium autem aliquid excepturi nihil suscipit ipsa.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;wbr&gt;</code>
+                <p>Es un salto de linea opcional, significa que si necesita saltar de linea salte sino no lo ara.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;p&gt;Loremipsumdolorsitamet,consecteturadipisicingelit.&lt;wbr&gt;Temporesolutaarchitectoperspiciatisillumaliquamdeleniti,temporibusmagnam,quasi.&lt;wbr&gt;Illumeosipsumaliquampossimus,accusantium autemaliquidexcepturinihilsuscipitipsa.&lt;/p&gt;
+</code></pre>
+                <div class="navegador">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <p class="texto normal">Loremipsumdolorsitamet,consecteturadipisicingelit.<wbr>Temporesolutaarchitectoperspiciatisillumaliquamdeleniti,temporibusmagnam,quasi.<wbr>Illumeosipsumaliquampossimus,accusantiumautemaliquidexcepturinihilsuscipitipsa.</p>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </article>
+
+    <article class="etiquetas-embebido contenedor">
+        <h2>Contenido Embebido</h2>
+        <ol>
+            <li>
+                <code class="solito">&lt;img&gt;</code>
+                <p>Se utiliza para colocar imagenes. Esta etiqueta es de solo apertura y se lo colocan 2 atributos el primero es <code class="solito">src=""</code> que en el se coloca la ruta o dirección de donde sera importada la imagen y el segundo es <code class="solito">alt=""</code> aqui se coloca una pequeña descripción de la imagen (si la imagen carga sin ningun problema lo que se coloque dentro del atributo no se mostrará pero en caso contrario lo que se visualizará sera el valor del atributo).</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;img src="http://lorempixel.com/300/200" alt="Esta imagen es aleatoria, es traida de Lorempixel."&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <img src="http://lorempixel.com/300/200" alt="Esta imagen es aleatoria, es traida de Lorempixel.">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;audio&gt;&lt;/audio&gt;</code>
+                <p>Se utiliza para importar un audio al sitio web. Esta etiqueta al igual que la de <code class="solito">&lt;img&gt;</code> tiene el atributo <code class="solito">src=""</code> para colocar la ruta o dirección de donde obtendremos el audio. A la etiqueta se le pueden agregar atributos adicionales para controlar el audio que se va a insertar como son:</p>
+                <ul type="disc">
+                    <li>loop.- Nos sirve para repetir el audio automaticamente infinitas veces.</li>
+                    <li>autoplay.- Sirve para reproducir de manera automatica el audio al momento de cargar el sitio web.</li>
+                    <li>controls.- Sirve para agregar los controles basico para controlar el audio.</li>
+                </ul>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;audio src="mi_audio.mp3" controls&gt;&lt;/audio&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <audio src="mi_audio.mp3" controls></audio>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;video&gt;&lt;/video&gt;</code>
+                <p>Se utiliza para importar un video al sitio web. Al igual que el resto de etiquetas de esta sección debemos de agregar el atributo <code class="solito">src=""</code> para indicarle de donde queremos que nos importe el video. Y al igual que la etiqueta de <code class="solito">&lt;audio&gt;&lt;/audio&gt;</code> podemos agregar atributos adicionales para un mejor control del video.</p>
+                <ul type="disc">
+                    <li>loop.- Nos sirve para repetir el video automaticamente infinitas veces.</li>
+                    <li>autoplay.- Sirve para reproducir de manera automatica el video al momento de cargar el sitio web.</li>
+                    <li>controls.- Sirve para agregar los controles basico para controlar el video.</li>
+                </ul>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;video src="mi_video.mp4" controls&gt;&lt;/video&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <video src="mi_video.mp4" controls></video>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </article>
+
+    <article class="etiquetas-tabla contenedor">
+        <h2>Tablas</h2>
+        <ol>
+            <li>
+                <code class="solito">&lt;table&gt;&lt;/table&gt;</code>
+                <p>Es la etiqueta principal que se utiliza para declarar una tabla.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+
+&lt;/table&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;thead&gt;&lt;/thead&gt;</code>
+                <p>Se utiliza para indicar la filas y celdas que fungiran como columnas de la cabecera de la tabla.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;thead&gt;
+
+    &lt;/thead&gt;
+&lt;/table&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;tbody&gt;&lt;/tbody&gt;</code>
+                <p>Se utiliza para indicar las filas y celdas que fungiran como columnas de todo el cuerpo de la tabla.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;thead&gt;
+        
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+            
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;tfoot&gt;&lt;/tfoot&gt;</code>
+                <p>Se utiliza para indicar las filas y celdas que fungiran como columnas de la parte final de la tabla.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;caption&gt;Mi tabla&lt;/caption&gt;
+    &lt;thead&gt;
+
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+                
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;tr&gt;&lt;/tr&gt;</code>
+                <p>Se utiliza para declarar cada una de las filas. Cada que se utiliza esta etiqueta se crea una nueva fila.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            
+        &lt;/tr&gt;     
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;th&gt;&lt;/th&gt;</code>
+                <p>Se utiliza para colocar celdas a las filas. Cada <code class="solito">&lt;th&gt;&lt;/th&gt;</code> representa una celda dentro de la columna de la cabecera.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Columna 1&lt;/th&gt;
+            &lt;th&gt;Columna 2&lt;/th&gt;
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            
+        &lt;/tr&gt;     
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <table class="texto normal">
+                            <thead>
+                                <tr>
+                                    <th>Columna 1</th>
+                                    <th>Columna 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;td&gt;&lt;/td&gt;</code>
+                <p>Se utiliza para declarar celdas en cualquier otra parte de la tabla que no sea la cabecera.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Columna 1&lt;/th&gt;
+            &lt;th&gt;Columna 2&lt;/th&gt;
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 1&lt;/td&gt;
+            &lt;td&gt;Celda 2&lt;/td&gt;
+        &lt;/tr&gt;     
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda Final 1&lt;/td&gt;
+            &lt;td&gt;Celda Final 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <table class="texto normal">
+                            <thead>
+                                <tr>
+                                    <th>Columna 1</th>
+                                    <th>Columna 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Celda 1</td>
+                                    <td>Celda 2</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Celda Final 1</td>
+                                    <td>Celda Final 2</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;caption&gt;&lt;/caption&gt;</code>
+                <p>Nos sirve para darle un nombre a la tabla. La ventaja de usar caption es que el nombre es parte de la tabla a diferencia de "p" que es un parrafo externo de ella.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;caption&gt;Mi tabla&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Columna 1&lt;/th&gt;
+            &lt;th&gt;Columna 2&lt;/th&gt;
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 1&lt;/td&gt;
+            &lt;td&gt;Celda 2&lt;/td&gt;
+        &lt;/tr&gt;     
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda Final 1&lt;/td&gt;
+            &lt;td&gt;Celda Final 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <table class="texto normal">
+                            <caption>Mi tabla</caption>
+                            <thead>
+                                <tr>
+                                    <th>Columna 1</th>
+                                    <th>Columna 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Celda 1</td>
+                                    <td>Celda 2</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Celda Final 1</td>
+                                    <td>Celda Final 2</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;colgroup&gt;&lt;/colgroup&gt;</code>
+                <p>Sirve para agrupar una columna entera y poder darle estilos especificos a toda una columna.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;colgroup&gt;
+
+    &lt;/colgroup&gt;
+    &lt;caption&gt;Mi tabla&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Columna 1&lt;/th&gt;
+            &lt;th&gt;Columna 2&lt;/th&gt;
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 1&lt;/td&gt;
+            &lt;td&gt;Celda 2&lt;/td&gt;
+        &lt;/tr&gt;     
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda Final 1&lt;/td&gt;
+            &lt;td&gt;Celda Final 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;col&gt;</code>
+                <p>Se usa para indicar las columnas dentro de la etiqueta colgroup. Se tiene que colocar un <code class="solito">&lt;col&gt;</code> por cada columna de la tabla.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col&gt;
+        &lt;col style="background: green;"&gt;
+    &lt;/colgroup&gt;
+    &lt;caption&gt;Mi tabla&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Columna 1&lt;/th&gt;
+            &lt;th&gt;Columna 2&lt;/th&gt;
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 1&lt;/td&gt;
+            &lt;td&gt;Celda 2&lt;/td&gt;
+        &lt;/tr&gt;     
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda Final 1&lt;/td&gt;
+            &lt;td&gt;Celda Final 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <table class="texto normal">
+                            <colgroup>
+                                <col>
+                                <col style="background: green;">
+                            </colgroup>
+                            <caption>Mi tabla</caption>
+                            <thead>
+                                <tr>
+                                    <th>Columna 1</th>
+                                    <th>Columna 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Celda 1</td>
+                                    <td>Celda 2</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Celda Final 1</td>
+                                    <td>Celda Final 2</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </article>
+
+    <article class="etiquetas-formulario contenedor">
+        <h2>Formularios</h2>
+        <p>Los formularios son la herramienta que nos permite solicitarle información al usuario y despues poderla procesar con algun lenguaje de programación del lado del servidor.</p>
+        <ol>
+            <li>
+                <code class="solito">&lt;form&gt;&lt;/form&gt;</code>
+                <p>Es la etiqueta principal para definir un formulario. Esta etiqueta tiene 2 atributos principales <code class="solito">action=""</code> que indica a que documento enviará los datos del formulario para despues ser procesados desde ese documento y <code class="solito">method=""</code> que inica el metodo de envio de los datos.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    
+&lt;/form&gt;
+</code></pre>
+            </li>
+            <li>
+                <code class="solito">&lt;label&gt;&lt;/label&gt;</code>
+                <p>Es un elmento para mostrar información, dicho de otro modo es una de las etiquetas que muestra información. Se le puede colocar un atributo para asignarlo a un elemento especifico que se hace mediante el atributo <code class="solito">for=""</code> donde se coloca alguna palabra clave y el elemento con el que se le valla a asosiar debe de contener la misma palabara clave en el atributo id.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;label for="texto"&gt;Soy una etiqueta&lt;/label&gt;
+    &lt;input type="text" id="texto"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form action="">
+                            <label for="texto" class="texto normal">Soy una etiqueta: </label>
+                            <input type="text" id="texto">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"text"&gt;</code>
+                <p>Crea una caja de texto que permite ingresar texto.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="text" name="texto"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="text">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"email"&gt;</code>
+                <p>Crea una caja de texto que permite ingresar un correo electronico con la facilidad de que internamente el navegador valida que el usuario ingrese un correo valido.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="email" name="email"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="email">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"password"&gt;</code>
+                <p>Crea una caja de texto que permite ingresar un correo electronico con la facilidad de que internamente el navegador valida que el usuario ingrese un correo valido.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="password" name="password"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="password">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"checkbox"&gt;</code>
+                <p>Crea un elemento para poder seleccionar o deseleccionar el elemento.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="checkbox" name="checkbox" value="checkbox"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="checkbox">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"radio"&gt;</code>
+                <p>Crea un elemento para poder seleccionar pero la diferencia con el checkbox es que puedes crear un grupo de estos elementos para que solo puedas selecionar uno de muchos.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;!-- Radio solo --&gt;
+    &lt;input type="radio" name="radio" value="radio"&gt;
+
+    &lt;!-- Grupo de Radios --&gt;
+    &lt;input type="radio" name="genero" value="hombre"&gt;
+    &lt;input type="radio" name="genero" value="mujer"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="radio">
+                            <input type="radio" name="genero">
+                            <input type="radio" name="genero">
+                        </form>
+                    </div>
+                </div>
+                <p>Para indicar que tenemos un grupo de radios basta con ponerles el mismo nombre a los radios que formarán parte del grupo.</p>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"tel"&gt;</code>
+                <p>Crea una caja de texto, a nivel de una comptadora no se ve ninguna diferencia pero en un smarphone al dar clic abre el teclado de solo numeros.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="tel" name="tel"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="tel">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"date"&gt;</code>
+                <p>Crea una caja para poder ingresar una fecha. (Dependiendo del navegador pude tener efectos propios del mismo, por ejemplo Chrome muestra un calendario de donde puedes seleccionar la fecha).</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="date" name="date"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="date">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"reset"&gt;</code>
+                <p>Crea un boton que permite limpiar todos los inputs.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="text" name="texto"&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;input type="radio" name="genero" value="hombre"&gt;
+    &lt;input type="radio" name="genero" value="mujer"&gt;
+
+    &lt;input type="reset" name="reset" value="Resetear Valores"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="text">
+                            <input type="password">
+                            <input type="radio" name="genero">
+                            <input type="radio" name="genero">
+
+                            <input type="reset" value="Resetear Valores">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"time"&gt;</code>
+                <p>Crea un caja para poder incrustar una hora.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="time" name="time"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="time">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"number"&gt;</code>
+                <p>Crea una caja con un spin para poder poner un numero e ir aumentado o disminuyendo e valor con el spiner.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="number" name="number"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="number">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"range"&gt;</code>
+                <p>Crea un elemento tipo barra de volumen que permite seleccionar un valor.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="range" name="range"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="range">
+                        </form>
+                    </div>
+                </div>
+                <p>Al <code class="solito">&lt;input type="range" name="range"&gt;</code> se le puede indicar el numero de donde va a partir con el atributo <code class="solito">min=""</code> y tambien indicarle un valor maximo con el atributo <code class="solito">max=""</code>, lo puedes personalizar aun más para decirle de cuanto en cuanto va a ir avanzando con el atributo<code class="solito">step=""</code> y por ultimo le puedes indicar el valor inicial con el atributo <code class="solito">value=""</code></p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="range" min="0" max="100" step="20" value="20" name="range"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="range" min="0" max="100" step="20" value="20">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"color"&gt;</code>
+                <p>Crea una caja que muestra un color y al dar clic te permite seleccionar algun otro color.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="color" name="color"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="color">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"file"&gt;</code>
+                <p>Crea un boton que permite seleccionar algun archivo para poderlo enviar.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="file" name="file"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input class="texto normal" type="file">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"submit"&gt;</code>
+                <p>Crea un boton que su función será enviar la información del formulrio.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+                <p>Se le puede colocar el atributo <code class="solito">value=""</code> para personalizar el texto que se coloca en el botón.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="submit" value="Ingresar"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;input type"image"&gt;</code>
+                <p>Crea un boton a partir de una imagen que se tiene que especificar la ruta de donde sera obtenida y la función es enviar los datos.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;input type="image" src="http://img.pngget.com/clip1/403kcajfkhl.png"&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <input type="image" src="http://img.pngget.com/clip1/403kcajfkhl.png" style="width: 100px;">
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;button&gt;&lt;/button&gt;</code>
+                <p>Crea un boton que su función será enviar la información del formulrio.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;button&gt;Mi boton&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <button>Mi boton</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;select&gt;&lt;/select&gt;</code>
+                <p>Crea una especie de combo que permite seleccionar una opción de una lista desplegable.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;select name="select"&gt;
+        
+    &lt;/select&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <select>
+                                
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;option&gt;&lt;/option&gt;</code>
+                <p>Con esta etiqueta podemos agregar items al combo.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;select name="select"&gt;
+        &lt;option value="Carro"&gt;Carro&lt;/option&gt;
+        &lt;option value="Moto"&gt;Moto&lt;/option&gt;
+        &lt;option value="Avión"&gt;Avión&lt;/option&gt;
+        &lt;option value="Ferri"&gt;Ferri&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <select>
+                                <option value="Carro">Carro</option>
+                                <option value="Moto">Moto</option>
+                                <option value="Avión">Avión</option>
+                                <option value="Ferri">Ferri</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;optgroup&gt;&lt;/optgroup&gt;</code>
+                <p>Nos sirve para agrupar un conjunto de opciones (items) del combo.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;select name="select"&gt;
+        &lt;optgroup label="Terrestres"&gt;
+            &lt;option value="Carro"&gt;Carro&lt;/option&gt;
+            &lt;option value="Moto"&gt;Moto&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="Aereos"&gt;
+            &lt;option value="Avión"&gt;Avión&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="Acuaticos"&gt;
+            &lt;option value="Ferri"&gt;Ferri&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <select>
+                                <optgroup label="Terrestres">
+                                    <option value="Carro">Carro</option>
+                                    <option value="Moto">Moto</option>
+                                </optgroup>
+                                <optgroup label="Aereos">
+                                    <option value="Avión">Avión</option>
+                                </optgroup>
+                                <optgroup label="Acuaticos">
+                                    <option value="Ferri">Ferri</option>
+                                </optgroup>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <p>A la etiqueta se le coloca el atrubuto <code class="solito">label=""</code> para darle un nombre a la categoría que contendrá nuestras opciones.</p>
+            </li>
+            <li>
+                <code class="solito">&lt;textarea&gt;&lt;/textarea&gt;</code>
+                <p>Es como un input de tipo texto la diferencia es que el textarea te permite escribir en varias lineas.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;textarea name="textarea"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <textarea></textarea>
+                        </form>
+                    </div>
+                </div>
+                <p>Se puede limitar el numero de caracteres que el usuario puede escribir en el <solito class="code">&lt;textarea&gt;&lt;/textarea&gt;</solito> agregando la propiedad <code class="solito">maxlength=""</code></p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;textarea name="textarea" maxlength="10"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <textarea maxlength="10"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;fieldset&gt;&lt;/fieldset&gt;</code>
+                <p>Sirve para agrupar elementos dentro del formulario.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;label for="texto"&gt;Soy una etiqueta&lt;/label&gt;
+        &lt;input type="text" id="texto name="text"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <fieldset>
+                                <label for="texto" class="texto normal">Nombre: </label>
+                                <input type="text" id="texto">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code class="solito">&lt;legend&gt;&lt;/legend&gt;</code>
+                <p>Se utiliza para colocarle un titulo al grupo de campos.</p>
+                <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Datos del Inicio de Sesión&lt;/legend&gt;
+        &lt;input type="text" name="texto"&gt;
+        &lt;input type="password" name="password"&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Genero&lt;/legend&gt;
+        &lt;input type="radio" name="genero" value="hombre"&gt;
+        &lt;input type="radio" name="genero" value="mujer"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <fieldset>
+                                <legend class="texto normal">Datos del Inicio de Sesión</legend>
+                                <input type="text">
+                                <input type="password">
+                            </fieldset>
+                            <fieldset>
+                                <legend class="texto normal">Genero</legend>
+                                <input type="radio" name="genero">
+                                <input type="radio" name="genero">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <p>Todo elemento del formulario que valla a recibir información del usuario debe de tener un atributo importante que es el <code class="solito">name=""</code> sin este atributo el formulario no envia ese valor y al ocurrir eso no podremos rescatar la información del lado del servidor para ser procesada.<br>
+        Hay elementos que también requieren el atributo <code class="solito">value=""</code> esto porque los usuarios no puede colocar de forma manual el valor pero internamente nosostros podemos indicarle un valor especifico que al ser procesado lo identifiquemos con nuestro valor. Y los elementos que llevan ese atributo son todos aquellos donde el ususario no puede indicar la información directamente él, osea que el no la escribe.</p>
+        <p>Exiete un atributo más que podemos agregarle a los elementos de un formulario, en especifico los campos de tipo texto que es <code class="solito">placeholder=""</code> que proporciona un texto como ayuda a la información que debes escribir dentro de ellos y el usuario al escribir texto desaparece esa ayuda.</p>
+        <pre class="codigo language-markup line-numbers" data-language="HTML5"><code>
+&lt;form action="php/datos.php" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Datos del Inicio de Sesión&lt;/legend&gt;
+        &lt;input type="text" name="texto" placeholder="Nombre:"&gt;
+        &lt;input type="password" name="password" placeholder="Contraseña:"&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Genero&lt;/legend&gt;
+        &lt;input type="radio" name="genero" value="hombre"&gt;
+        &lt;input type="radio" name="genero" value="mujer"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+                <div class="navegador" style="padding-top: 20px;">
+                    <div class="barra"></div>
+                    <div class="layaout">
+                        <form>
+                            <fieldset>
+                                <legend class="texto normal">Datos del Inicio de Sesión</legend>
+                                <input type="text" placeholder="Nombre:">
+                                <input type="password" placeholder="Contraseña:">
+                            </fieldset>
+                            <fieldset>
+                                <legend class="texto normal">Genero</legend>
+                                <input type="radio" name="genero">
+                                <input type="radio" name="genero">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+    </article>
+
+    <script src="./recursos/js/prism.js"></script>
+</body>
+</html>
