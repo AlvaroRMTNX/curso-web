@@ -1,7 +1,9 @@
 .idea/
 node_modules/
 vendor/
+notes/
 
 .DS_Store
 prepros.config
 prepros-6.config
+boostnote.json
